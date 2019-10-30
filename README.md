@@ -188,12 +188,12 @@ password empty.
 **Note**: _We STRONGLY suggest, not to use this, even if this add-on is
 only exposed to your internal network. USE AT YOUR OWN RISK!_
 
-## Using the Pi-hole sensor in Home Assistant
+## Using the Pi-hole integration in Home Assistant
 
-Home Assistant offers a [Pi-hole sensor][pi-hole-sensor] that allows you to
-display the statistical summary of your Pi-hole installation.
+Home Assistant offers a [Pi-hole integration][pi-hole-integration] that allows you to
+retrieve statistics and interact with your Pi-hole installation.
 
-To enable this sensor, add the following lines to your `configuration.yaml`
+To enable this integration, add the following lines to your `configuration.yaml`
 file:
 
 ```yaml
