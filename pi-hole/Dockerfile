@@ -1,4 +1,4 @@
-ARG BUILD_FROM=hassioaddons/base:4.1.1
+ARG BUILD_FROM=hassioaddons/base:5.0.2
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -7,7 +7,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 ENV PATH="${PATH}:/opt/pihole" \
     CORE_TAG="v4.3.2" \
-    WEB_TAG="v4.3" \
+    WEB_TAG="v4.3.2" \
     FTL_TAG="v4.3.1"
 
 # We need to copy in the patches need during build
@@ -27,7 +27,7 @@ RUN \
     \
     && apk add --no-cache \
         bc=1.07.1-r1 \
-        bind-tools=9.14.3-r0 \
+        bind-tools=9.14.7-r0 \
         coreutils=8.31-r0 \
         git=2.22.0-r0 \
         grep=3.3-r0 \
@@ -36,24 +36,24 @@ RUN \
         logrotate=3.15.0-r0 \
         lua-resty-http=0.13-r0 \
         ncurses=6.1_p20190518-r0 \
-        nginx-mod-http-lua=1.16.1-r0 \
-        nginx=1.16.1-r0 \
-        openssl=1.1.1c-r0 \
+        nginx-mod-http-lua=1.16.1-r1 \
+        nginx=1.16.1-r1 \
+        openssl=1.1.1d-r0 \
         perl=5.28.2-r1 \
-        php7-fileinfo=7.3.8-r0 \
-        php7-fpm=7.3.8-r0 \
-        php7-json=7.3.8-r0 \
-        php7-opcache=7.3.8-r00 \
-        php7-openssl=7.3.8-r0 \
-        php7-phar=7.3.8-r0 \
-        php7-session=7.3.8-r0 \
-        php7-sockets=7.3.8-r0\
-        php7-sqlite3=7.3.8-r0 \
-        php7-zip=7.3.8-r0 \
+        php7-fileinfo=7.3.11-r0 \
+        php7-fpm=7.3.11-r0 \
+        php7-json=7.3.11-r0 \
+        php7-opcache=7.3.11-r00 \
+        php7-openssl=7.3.11-r0 \
+        php7-phar=7.3.11-r0 \
+        php7-session=7.3.11-r0 \
+        php7-sockets=7.3.11-r0\
+        php7-sqlite3=7.3.11-r0 \
+        php7-zip=7.3.11-r0 \
         procps=3.3.15-r0 \
         psmisc=23.2-r1 \
         sed=4.7-r0 \
-        sqlite=3.28.0-r0 \
+        sqlite=3.28.0-r1 \
         sudo=1.8.27-r0 \
         wget=1.20.3-r0 \
     \
